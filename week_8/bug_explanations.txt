@@ -1,0 +1,29 @@
+1. remove_duplicates(lst)
+Bug: The function iterates over new_list, which is initially empty, so the loop never executes.
+Bug: If i in new_list
+
+2. second_largest(numbers)
+Bug 1: If a new largest value is found, second_largest is set to the same value instead of updating properly.
+Bug 2: The function does not account for lists with fewer than two distinct numbers.
+Fix: Properly update second_largest and handle edge cases.
+
+3. contains_pairs(lst, target)
+Bug 1: The nested loop structure incorrectly exits early due to misplaced return False.
+Bug 2: The function checks lst[i] + lst[j] == target without ensuring i ≠ j, leading to self-pairing.
+Fix: Use a set to track seen numbers and check for complements.
+
+4. rotate_list(lst, k)
+Bug 1: copy.deepcopy(lst) is unnecessary.
+Bug 2: Incorrect reference to list instead of lst.
+Bug 3: Indexing logic in new_list[(i-k) % len(lst)] = lst[i] is unnecessary.
+Fix: Use Python slicing for an efficient rotation.
+
+5. merge_dicts(d1, d2)
+Bug 1: The loop iterates over d1, missing keys that exist only in d2.
+Bug 2: merged[item] = item incorrectly assigns the key as a value instead of summing.
+Fix: Use get() to merge dictionaries correctly.
+
+6. invert_dict(d)
+Bug 1: new_dict = [] initializes as a list instead of a dictionary.
+Bug 2: new_dict[key] = d[key] does not swap keys and values.
+Fix: Initialize new_dict as {} and swap keys and values properly.

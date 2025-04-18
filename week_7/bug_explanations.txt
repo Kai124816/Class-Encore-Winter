@@ -1,0 +1,23 @@
+on_every_line:
+The function returns False immediately after checking the first line instead of continuing to check all lines.
+on_line should reset inside the loop only if a match isn't found, but the reset is unnecessary.
+
+most_common_word:
+common_dict[word] += 2 incorrectly increments the count by 2 instead of 1.
+The comparison common_dict[word] >= max_apperances should be >, or else it could incorrectly favor later words in case of a tie.
+
+sum_of_each_row:
+The function multiplies each row's sum by 2 before appending it to sum_list, which alters the expected results.
+[col][row] instead of [row][col]
+
+smallest_each:
+The condition elif pair[1] > smallest_dict[pair[0]]: should be < to find the smallest value instead of the largest.
+The final return statement unnecessarily reverses the list.
+
+what_ranking:
+The function extracts the ranking from parts[-1], which could be incorrect; it should be parts[0] instead.
+if len(parts) < 1
+
+largest_on_each_row:
+The function multiplies each largest value by 2 before appending it to largest_list, leading to incorrect results.
+Wrong indentation for largest_list
